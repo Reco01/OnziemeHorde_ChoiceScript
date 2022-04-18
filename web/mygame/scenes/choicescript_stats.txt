@@ -1,0 +1,13 @@
+﻿*stat_chart
+
+    text traceur
+
+    percent Hippathie
+
+    percent Hathor
+
+    percent Castor
+
+    percent Pollux
+
+

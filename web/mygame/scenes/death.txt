@@ -1,0 +1,16 @@
+﻿*page_break
+C’est fini.
+*line_break
+*line_break
+Vous avez rejoint le Vent.
+*line_break
+*line_break
+La onzième Horde a échoué : le bout du monde restera un mystère pendant encore plusieurs siècles.
+*line_break
+*line_break
+Mais une nouvelle génération se prépare. Pensez-vous qu’il faille renouveler l’aventure ? Si oui, recommencez.
+
+*set Hippathie 0
+*set Hathor 0
+*set Castor 0
+*set Pollux 0

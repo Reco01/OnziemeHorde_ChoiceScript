@@ -1,0 +1,210 @@
+﻿*page_break La dernière tempête
+"Je pensais qu'on avait aucune chance", dit Hathor, un sourire aux lèvres. Vous approuvez d'un regard mais la chair de poule qui dresse vos poils vous indique qu'il est trop tôt pour crier victoire. Chaque fibre de votre être sent que le vent n'est pas encore calmé et qu'il se prépare un phénomène pire encore.
+*page_break
+Vous pensiez tout connaître du vent mais seuls les enfants croient à ce genre d'illusion. 
+*line_break
+*line_break
+Ce que vous avez pris pour la fin de la tempête n'était peut-être qu'une accalmie. Votre troupe est au creux de la vague et s'imagine que tout est terminé alors que le raz-de-marée va s'abattre. De quoi s'agit-il? D'une réponse? Une réplique? Votre intuition plus que votre science perçoit qu'un danger plus grand encore que le Poursuiveur approche.
+*page_break
+Un furvent…
+
+*if (furvent = true)
+  Vous l'avez déjà vaincu en ville. Vous pensiez l'épreuve terminée mais elle va se répéter. Et la nouvelle vague pourrait être pire que la précédente. Vous avez peur mais votre récente victoire vous donne de l'assurance. Tous les personnages regagnent des forces.
+  *set Hippathie +3
+  *set Hathor +3
+  *set Castor +3
+  *set Pollux +3
+  *goto desert3
+
+*if (furvent = false)
+  Si c'est bien ce que vous pensez, vous allez rencontrer le pire ennemi des Hordes, celui auquel personne n'échappe. Ceux qui prétendent avoir survécu sont fous ou devenus fous. Mais vous savez que vous n'avez pas le choix: vous êtes trop près du but pour échouer maintenant.
+*goto desert3
+
+*label desert3
+La densité du sable augmente. Votre vision se réduit. Le vent forcit. Vous entendez un bruit. Cela ressemble à la mélodie d'un cromorne. Ne serait-ce pas une de ces nouvelles sirènes qu'on installe autour des ports pour guider les bateaux à hélices? Ces derniers sont parfaitement équipés pour affronter les pires vents. Vous décidez de faire route dans cette direction.
+*page_break L’appel du cromorne
+L'aéroport est indiqué à dix minutes de marche mais votre intuition vous souffle que le furvent atteindra son paroxysme dans une douzaine. Pour le moment vous contrez sous slamino et vous avez le sentiment d'une promenade du dimanche mais très vite les choses vont se dégrader. Vous apercevez alors un puits. 
+*line_break
+Jolie maçonnerie. Des décorations d'airpailleurs. Certains ont laissé des cages accrochées au bout des cordes. C'est le moment de prendre une décision clé. 
+*line_break
+*line_break
+Allez-vous rebrousser chemin pour vous cacher dans la ville? Vous cacher dans le puits? Partir dans le désert en suivant votre intuition ou jeter vos dernières forces dans une course effrénée vers l'aéroport?
+
+*choice
+  # Revenir sur vos pas.
+    Le Poursuiveur est mort. Rien ne vous empêche de revenir en ville. Vous trouverez bien une âme charitable pour récupérer le carnet de contre et le transmettre. C'est tout plein d'espoir que vous tournez les talons pour détaler. Sans doute avez-vous pris une insolation car vous avez oublié que vous marchez dans le désert depuis des heures. La tempête vous rattrappe rapidement et vous engloutit. Vous êtes morte.
+    *goto_scene death
+
+  # S’abriter dans le puits.
+    Vite, vous agrippez l'échelle et descendez dans le puits. L'équipe referme la trappe et attend tranquillement que la tempête se déchaîne. À travers le masque de contre, vous ne percevez pas l'odeur tout de suite. Une odeur de poil mouillé. 
+    *line_break
+    *line_break
+    Peut-être auriez-vous dû vous poser la question: pourquoi des airpailleurs laisseraient-ils leur instrument de travail derrière eux? 
+    *line_break
+    *line_break
+    Parce qu'ils sont tous morts. Une meute de crevents sauvages a investi le puits et tué les puisards. Il est trop tard quand vous réalisez ce qui se passe. Vous êtes massacrés dans l'obscurité la plus totale. C'est la fin de votre quête.
+    *goto_scene death
+
+  # Avancer coûte que coûte !
+    Vous préférez avancer au jugé dans le désert. Le sable vous aveugle presque mais vous continuez tout droit. L'univers va bien mettre un buisson ou un abri sur votre chemin. La Chance sera avec vous. Ne dit-on pas qu'elle sourit aux audacieux? 
+    *line_break
+    *line_break
+    Vous avancez péniblement pendant les minutes suivantes et votre conviction métaphysique s'évanouit rapidement. Quand le furvent surgit et démembre votre équipe, vous comprenez que la vie est injuste. La Nature est aveugle. Elle est et se contente d'être. 
+    *line_break
+    *line_break
+    Seuls les humains croient et défendent cette notion de juste rétribution qu'est la Justice. Vous auriez aimé léguer cette leçon philosophique à vos successeurs mais il est trop tard: vous êtes morte et les pages du carnet ont été éparpillées aux quatre vents.
+    *goto_scene death
+
+  # Jeter votre fierté aux orties et opter pour l’aéroport.
+    Vous avez entendu un débat à Ker Derban. Les aéroports conçus par la Pragma devraient être, comme les vaisseaux, interdits aux Hordiers: ce sont des artifices et il faut contrer avec le corps. Il est trop tard pour les débats spéculatifs. Votre devoir est d'emmener les survivants jusqu'au bout et de léguer votre savoir à la prochaine génération.
+    *line_break
+    *line_break
+
+    Vous êtes prête à endurer la disgrâce et à la honte. Rien ne vous arrêtera!
+    *page_break
+    Le souffle du vent a presque triplé. Vous essayez de donner des ordres à vos camarades mais les mugissements engloutissent vos paroles. À peine jetez-vous un bloc d'air qu'il est freiné et effacé.
+    *line_break
+    *line_break
+    Jamais une horde n'a affronté pareille situation. La communication est pour la Horde ce que la glu des méduses est aux murs. Pour outrepasser l'obstacle vous allez devoir projeter vos phrases avec plus de vitesse et de force, aller chercher en vous cette force plus vive que le vif.
+    *page_break Crier avec le vent
+    *goto desert4
+
+*label desert4
+En formation, vous avancez face au vent. L'air est de plus en plus chargé. Vos poumons sont en feu. Vous manquez d'oxygène.
+*choice
+  # Respirer à travers le masque.
+    Erreur de débutante! Vous avalez du sable. Vous perdez 2 points de vie.
+    *set Hippathie -2
+    *goto desert5
+
+  # Avancer en apnée.
+    Vous préférez vous retenir pour ne pas avaler de sable mais votre corps ne peut avancer sans air. Votre corps perd ses forces.
+    *set Hippathie -1
+    *goto desert5
+
+  # Respirer dos au vent.
+    Rapidement vous tournez la tête et dos au vent, vous reprenez votre respiration.
+    *set Hippathie +1
+    *goto desert5
+
+*label desert5
+Vous entendez un bruit différent. Métallique? Le choc d'une hélice contre un bouclier? Les débris d'un char à voile passent devant vous.
+*line_break
+*line_break
+Un Oblique tentait-il de rejoindre la ville quand il a été surpris par le furvent? Il faut être fou pour sortir seul. Seule une horde peut résister. D'autres débris voltigent autour de vous.
+
+*choice
+  # Rester debout et avancer.
+    Un tonneau percute ${var} et lui arrache 3 points de vie. Vous entendez un autre hordier gémir quand il est épiauté à l'épaule par un débri de bois et une rondelle de métal vous éclate la clavicule.
+    *set Hippathie -3
+    *if (traceur = "Castor") 
+      *set Castor -3
+    *if (traceur = "Pollux") 
+      *set Pollux -3
+    *if (traceur = "Hathor") 
+      *set Hathor -3
+    *goto desert6
+
+  # « Couchez! ».
+    Vous plongez au sol et évitez les débris. Dans cette position vous n'avancez pas. Le temps file. Vous demandez aux autres d'avancer en rampant le temps de passer la zone dangereuse.
+    *goto desert6
+
+*label desert6
+*page_break
+Le vent est si fort que vous ne pouvez progresser qu'en pliant les jambes pour abaisser votre centre de gravité. Vous avancez pas à pas. L'aéroport se dessine dans la tempête mais vous ne pouvez pas faire mieux. C'est alors que des créatures surgissent au milieu de la tempête. Des gorces. Une famille: la mère et les petits. Seuls ces animaux ont la force pour défier Eole. 
+*line_break
+*line_break
+Que faire?
+
+*if (traceur = "Hathor") 
+  Mettre Hathor en traceuse semblait stupide. Elle est la plus fragile de votre groupe, la plus fragile de toute la Horde et probablement la traceuse la plus légère de l'Histoire du contre. 
+  *line_break
+  *line_break
+  Et pourtant… elle a survécu jusque là, analysé les courants du vent et suivi les pistes au sol avec efficacité. Quand elle voit la mère gorce débouler au milieu du sable elle ne doute pas une seconde. Elle gueule avec une énergie inattendue "Droit sur elle! Etayez-moi! Elle va nous couper le vent et on finira en latéral, profil au vent. "
+  *line_break
+  *line_break
+   Vous poussez de toutes vos forces sur les cinquante kilos de la feuleuse et, contre toute attente, le Pack avance. Votre équipe a trouvé la faille. Guidée par son instinct animal la gorce suivi un chemin dégagé dans le labyrinthe du vent. Vous franchissez trente mètres avec une déconcertante facilité et arrivez à côté de l'aéroport. Il vous suffit alors de quelques pas chassés pour terminer.
+  *page_break L’aéroport de la Pragma
+  *goto aeroport2
+
+*else
+*choice
+  # Attendre.
+    Vous perdez du temps et de l'énergie. Une rafale vous décolle du sol et vous atterrissez quelques mètres plus loin, coupée de la horde. Vous savez que seule vous ne tiendrez pas plus de quelques secondes. Déjà le vent gronde…
+    *goto_scene death
+
+  # « Couché ! ».
+    Vous réduisez votre surface face au vent mais vous perdez trop de temps à progresser. Le rythme du vent s'accélère. Il ne vous reste que quinze malheureux mètres à parcourir quand le furvent se déchaîne. C'est triste de mourir si près du but.
+    *goto_scene death
+
+  # « Chainez ! ».
+    "Je veux qu'on fasse bloc et qu'on avance quoi qu'il arrive!" Vous vous empoignez les uns les autres et vous avancez. ${traceur} prend le vent facial de plein fouet et perd des forces mais vous le soutenez.
+    *line_break
+    *line_break
+    Penchés à quarante-cinq degrés, les survivants du pack étayent de leur mieux le numéro un et poussent, poussent et poussent encore avec toute l'énergie de l'espoir. Vous perdez de précieuses secondes mais vous parvenez à rejoindre l'aéroport à temps.
+    *page_break L’aéroport de la Pragma
+    *goto aeroport2
+
+*label aeroport2
+La Pragma a financé plusieurs aménagements de ce type à travers le monde. 
+*line_break
+*line_break
+Une très longue cuvette avec des murs qui coupent le vent. Un fond matelassé pour éviter les rebonds et les répliques. Des crochets pour amarrer les bateaux. Celui-ci est probablement le meilleur.
+*page_break
+Les carnets de contre racontent que la précédente Horde a mis au point la technique du chat volant pour affronter les tempêtes: s'accrocher à une corde et laisser le vent passer. Il faut juste penser à retomber sur ses pattes à la fin. 
+*line_break
+*line_break
+Qu'allez-vous faire? Vous plaquez contre une muraille de la paroi? Vous agrippez les uns aux autres? Ou vous encorder séparément? Dépêchez-vous! Il ne vous reste que quelques secondes pour prendre une décision!
+
+*choice
+  # « Deux secondes ! Je réfléchis ! ».
+    Trop tard! Le furvent s’ababt sur vous et vous pulvérise !
+    *goto_scene death
+
+  # « On s’abrite derrière la muraille ! ».
+    Vous vous collez tous à la haute muraille rutilante. Le vent latéral est coupé. 
+    *line_break
+    *line_break
+    Vous soufflez. Vous pensez avoir fait le meilleur choix jusqu'au moment où vous reconnaissez la signature des rafales: des cycloniques. Vous êtes tour à tour aspirés par les vortex et projetés à des centaines de mètres. On n'a jamais retrouvé votre corps. Votre quête se termine ici.
+    *goto_scene death
+
+  # « On s’encorde ! On va affronter ce furvent ensemble ! ».
+    Vous vous regroupez autour du point d'ancrage. Le furvent débarque et vous arrache du sol. 
+    *line_break
+    *line_break
+    Jamais vous n'avez vécu pareille expérience et jamais vous ne la revivrez. Si votre formation lâche vous risquez de vous percutez les uns les autres et de vous infliger des blessures mortelles. L'esprit de la Horde sera-t-il assez fort?
+
+    *if (Hippathie < 5)
+      Le voyage a eu raison de l'esprit. Vos compagnons lachent et ne sont plus que des débris agités par le vent. Ils vous percutent avec violence à plusieurs reprises. Votre choix n'était pas pertinent. Vous aimeriez le noter dans le carnet mais il est trop tard: votre quête s'achève ici.
+      *goto_scene death
+
+    *else
+      Jusqu'au bout vous resterez soudés. Même l'Enfer ne pourra dissoudre votre pack. Vous restez chainés d'un bout à l'autre de la vague et retombez de concert sur le sol matelassé. L'Histoire retiendra votre exploit: vous êtes parmi les premiers humains à survivre à un furvent.
+      *goto desert7
+
+  # « On va jouer à chat volant ! ».
+    Chaque membre de l'équipe s'attache à un crochet. Vous utilisez le court laps de temps restant pour vous étirer, la nuque notamment. 
+    *line_break
+    *line_break
+    L'exorde de la furie déferle et vous sentez l'onde de choc pénétrer votre corps jusqu'à la moelle des os. Vous tremblez mais vous résistez.
+    *page_break Le cœur du furvent
+    ', ', ',       °    ', ', ',    °   ', ', ',  X
+    *line_break
+    *line_break
+    La vague cyclonique rugit et vous aspire. Vous avez beau vous ancrer au sol, plier les genoux et essayer de kicker le revêtement de cuir, le souffle vous aspire en hauteur. Vous décollez et pendant de longues… très longues secondes... vous ne savez plus où se situent le haut et le bas.
+    *line_break
+    *line_break
+    Le furvent joue avec vous comme un chat avec une souris.
+    *page_break °a
+    La tornade passe et grâce à une habile cascade vous retombez sur vos pieds. Vous roulez pour vous réceptionner et constatez que vous n'avez pas encaissé de dommages. 
+    *line_break
+    *line_break
+    Ce port est excellemment bien conçu: les murailles ont brisé les lames et le sol rembourré a évité les rebonds et chutes violentes. Vous constatez que vos compagnons sont en vie également. La onzième horde peut être fière d'elle: vous avez survécu au furvent. Vous pourrez transmettre cet enseignement et cette graine d'espoir à la prochaine génération. Mais pour cela il vous faut encore un moyen de rentrer.
+    *goto desert7
+
+*label desert7
+*page_break
+Vous avez réussi. Il ne vous reste que quelques centaines de mètres avant d’atteindre l’oasis. Vous trouverez bien des nomades ou des glissiers qui vous fourniront un moyen de transport.
+*goto_scene arcfinal
+
+

@@ -1,0 +1,100 @@
+﻿*page_break L’oasis du bout du monde
+
+Les nuages de sable et la vue s’éclaircit. Sur votre droite, à une petite cinquantaine de mètres vous apercevez un vaisseau en vol stationnaire. Si vous ne faîtes pas confiance à la technologie, vous pouvez aussi pousser jusqu’à l’oasis. La présence de dromadaires vous fait supposer qu’une troupe de nomades y fait halte.
+ 
+*choice
+
+  # Attirer l’attention du bateau volant.
+    Vous courez en direction de la machine volante. Les glissiers défient les forces naturelles grâce à leur technologie. Ce modèle semble récent: les hélices ont remplacé la majorité des voiles. Si vous parvenez à monter, vous rejoindrez Extrême-Aval en quelques semaines. Vous criez et agitez des vêtements pour attirer l'attention du bateau.
+
+*if (couleur = "Inversée")
+  Le bateau déccélère progressivement et vient s'arrêter à côté de vous. Une tête barbue et coiffée d'un étrange couvre-chef surgit d'un hublot: "Foi de capitaine, je n'ai jamais vu des êtres aussi étranges que vous. Qu'êtes-vous donc? Et d'où venez-vous?"
+  *choice
+    # « Et ta mère ? ».
+      "Et ça parle!" s'exclame le capitaine. "Formidable! Montez donc à bord." Vous embarquez et expliquez votre situation. Coup de chance. Les glissiers font justement voile vers Extrême-Aval. Dans quelques semaines, vous pourrez léguer le carnet du scribe et vos témoignages à vos successeurs. Vous avez échoué mais la prochaine horde réussira. Votre quête s'achève sur une victoire.
+      *goto_scene ending
+    # « Nous sommes la Horde du Contrevent ».
+      "Mes respects! Je vous invite à embarquer à mon bord. Je vous fournirai toute l'aide que vous voudrez."Vous montez et expliquez votre situation. Coup de chance. Les glissiers font justement voile vers Extrême-Aval. Dans quelques semaines, vous pourrez léguer le carnet du scribe et vos témoignages à vos successeurs. Vous avez échoué mais la prochaine horde réussira. Elle reviendra défier le vent, les monstres et les assassins. Et un jour, vous le savez, vos descendants parviendront en Extrême-Amont. Cette pensée vous réconforte tandis que le soleil disparaît à l'horizon. Votre quête s'achève sur une victoire.
+      *goto_scene ending
+*else
+  Le vaisseau vous ignore et vous dépasse doucement. Il a beau avancer au ralenti, vous n’avez pas la force de lui courir après. 
+  *line_break
+  Vous pouvez encore tenter votre chance avec les nomades.
+  *choice
+    # Va pour l’oasis.
+      Au cœur du désert, quelques palmiers ont poussé autour d'un petit lac d'eau clair comme le cristal. Des nomades font halte régulièrement sur ce site. 
+      *line_break
+      *line_break
+      Ils vous accueillent avec moult sourires et vous offrent à manger des dattes. Vous expliquez votre histoire.
+
+      *if (Hippathie < 2)
+        Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+        *goto_scene death
+
+      *if (Castor < 1)
+        Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+        *goto_scene death
+
+      *if (Pollux < 2)
+        Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+        *goto_scene death
+
+      *if (Hathor < 2)
+        Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+        *goto_scene death
+
+      *else
+        Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. 
+        *line_break
+        *line_break
+        En revanche, ils ont bien compris que vous étiez une équipe de guerriers. Vous avez survécu au vent, au maître-foudre et aux chrones. Rien ne vous fait peur. Personne n'oserait vous attaquer. Les nomades offrent de vous conduire jusqu'à la station de glissiers la plus proche.
+        *line_break
+        *line_break
+        D'ici quelques semaines, vous pourrez revenir en Extrême-Aval pour léguer le carnet du scribe et vos connaissances à la nouvelle horde.
+        *line_break
+        *line_break
+        Votre quête s'achève sur une victoire.
+        *goto_scene ending
+
+
+
+
+
+
+
+
+  # Je préfère l’oasis.
+    Au cœur du désert, quelques palmiers ont poussé autour d'un petit lac d'eau clair comme le cristal. Des nomades font halte régulièrement sur ce site. 
+    *line_break
+    *line_break
+    Ils vous accueillent avec moult sourires et vous offrent à manger des dattes. Vous expliquez votre histoire.
+
+    *if (Hippathie < 2)
+      Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+      *goto_scene death
+
+    *if (Castor < 1)
+      Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+      *goto_scene death
+
+    *if (Pollux < 2)
+      Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+      *goto_scene death
+
+    *if (Hathor < 2)
+      Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. En revanche, ils ont bien compris que vous étiez en infériorité numérique, et blessés. Ils profitent de votre inattention pour sortir leurs armes et vous massacrer. Finalement ce n'est pas le vent qui aura eu votre peau mais le vice des hommes. Vous êtes morte.
+      *goto_scene death
+
+    *else
+      Les nomades ignorent tout de la Horde du Contrevent. Ils vivent isolés et ignorent tout des tentatives pour découvrir le bout du monde. 
+      *line_break
+      *line_break
+      En revanche, ils ont bien compris que vous étiez une équipe de guerriers. Vous avez survécu au vent, au maître-foudre et aux chrones. Rien ne vous fait peur. Personne n'oserait vous attaquer. Les nomades offrent de vous conduire jusqu'à la station de glissiers la plus proche.
+      *line_break
+      *line_break
+      D'ici quelques semaines, vous pourrez revenir en Extrême-Aval pour léguer le carnet du scribe et vos connaissances à la nouvelle horde.
+      *line_break
+      *line_break
+      Votre quête s'achève sur une victoire.
+      *goto_scene ending
+

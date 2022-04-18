@@ -1,0 +1,231 @@
+﻿*title La onzième horde
+*author Laurent Pendarias d’après Alain Damasio
+
+*scene_list
+  Startup
+  lac
+  desert
+  ville
+  lasttempete
+  arcfinal
+  death
+
+
+*create Hippathie 12
+*create Hathor 10
+*create Castor 22
+*create Pollux 20
+
+*create traceur "Aucun pour le moment"
+
+*create couleur "Normale"
+*create furvent false
+
+*if Hippathie <= 0
+  *goto_scene death
+
+Que révèlent les carnets de contre des précédentes hordes ?
+*line_break
+*line_break
+C’est peut-être l’occasion pour vous de le découvrir.
+*line_break
+*line_break
+[i]La onzième horde[/i] est une fiction interactive de 10 000 mots, d’après l’univers de [i]la Horde du Contrevent[/i] créé par Alain Damasio, dans laquelle vos choix déterminent le déroulement de l’histoire. Il s’agit d’un jeu entièrement textuel, sans graphismes ou effets sonores, porté par le pouvoir illimité de l’imagination.
+
+Incarnez l’aéromaîtresse Hippathie et guidez les derniers survivants d’une horde décimée par un maître-foudre. La mort est omniprésente et vous harcèlera sans cesse mais votre devoir vous poussera à accomplir une ultime mission : rapporter le carnet de contre à la génération suivante.
+
+Pouvez-vous encore défier le vent avec une équipe réduite ?
+
+*page_break Commencer l’aventure !
+
+
+
+Vous courez à perdre haleine et sentez que votre dernier souffle approche.
+*line_break
+Vos camarades sont morts.
+*line_break
+Tués par le maître foudre.
+
+*page_break
+
+"On y arrivera jamais, dit Hathor, d'un ton las. Nous avons perdu notre traceur. Nous n'avons plus les traineaux, nous n'avons plus de provision, nous n'avons plus d'espoir."
+
+*choice
+  # « La ferme ! ».
+    Vous prenez votre ton le plus ferme et vous enguirlandez la feuleuse. Elle baisse les yeux et se décide à vous suivre.
+    *goto Traceur 
+    
+  # « Alors reste là ! »
+    Hathor s'arrête et vous jette un regard implorant. Les jumeaux et vous continuez votre route.
+    *goto Traceur
+    
+  # « Alors nous n’avons plus le choix ! »
+    Vos trois compagnons s'arrêtent d'un même mouvement et vous regardent. Vous reconnaissez cette lueur dans leur regard. La flamme du combat se ranime. 
+    *goto Traceur
+
+*label Traceur
+"Nous n'avons plus de Pack mais nous allons en reformer un. Seuls nous sommes morts. Ensemble, nous pouvons aller jusqu'au bout!" Castor se gratte la tête:" Nous n'avons plus de traceur pour couper le vent et choisir le chemin." Vous balayez l'objection d'un geste de la main. "Nous allons en choisir un".
+*page_break Choix du traceur
+
+Qui? Voulez-vous demander à un des piliers de prendre la première place ? Pensez-vous que la petite feuleuse saura lire le terrain? Ou au contraire préférez-vous assumer cette tâche, quitte à prendre le vent facial?
+
+*choice
+  # Castor < ?
+    Le puissant ailier prend la tête du groupe.
+
+    *set traceur "Castor"
+    *goto bourrasque
+
+  # Pollux > ?
+    Sans un mot, Pollux prend la tête du groupe.
+    *set traceur "Pollux"
+    *goto bourrasque
+
+  # Hathor ¤ ?
+    La petite feuleuse se positionne devant vous.
+    *set traceur "Hathor"
+    *goto bourrasque
+
+  # Hippathie X ?
+    On n’est jamais mieux servi que par soi-même, pensez-vous, mais Pollux n’est pas de cet avis.
+    *line_break
+    « Tu veux vraiment mourir en première ligne ? Et qui lira le vent quand tu seras six pieds sous terre ? Je t’interdis de mourir ! » L’ailier se positionne devant vous. Il sait qu’il n’ira jamais au bout du monde mais vous devinez qu’il n’abandonnera jamais de protéger ses équipiers.
+    *set traceur "Pollux"
+    *goto bourrasque
+
+*label bourrasque
+"Et voilà, ce n'est pas compliqué. Et si le traceur fatigue, on peut toujours se relayer."
+*line_break
+*line_break
+Votre groupe fait de bric et de broc va rapidement avoir l'occasion de tester son talent. Un nuage de sable se profile à l'horizon. Vous n'atteindrez pas la prochaine ville indemnes. Vos compagnons comptent sur votre connaissance du vent et vos instructions.
+*line_break
+*line_break
+Vous affichez votre air le plus décidé pour masquer votre peur. En temps normal, vous avaleriez cette mini-tornade sur un pied avec les mains attachées dans le dos. Lancelot dirait à qui voudrait l'entendre que même ses cheveux pourraient contrer une bourrasque aussi ridicule. Malheureusement, vous n'êtes que quatre. Pas de quoi constituer un pack, même pas un fer. Vous n'êtes rien qu'un fragment brisé, prêt à être déchiqueté.
+*page_break Première tempête
+
+"On fait comme d'habitude. Je vous dis "couché" et vous plongez au sol. Je dis "Chaîné" et tout le monde s'accroche à son voisin. Si une bourrasque vous envoie valdinguer, vous vous plaquez au sol et vous rampez jusqu'à la formation. Capiche?"
+*line_break
+Vos camarades hochent la tête. Ils connaissent les manœuvres depuis l'âge de huit ans et les pratiquent depuis une quinzaine d'années. Même après une soirée de beuverie, ils pourraient appliquer.
+*page_break
+
+Première bourrasque de vent. Le sable crépite sur votre masque de contre. Le cuir protège la peau mais vous ressentez l'onde de choc, qui dure.
+*line_break
+Vous peinez à retenir votre souffle. L'air vous manque. Allez-vous essayer de respirer à travers le tissu ou vous retourner?
+
+*choice
+  # Respirer à travers le masque.
+    Erreur de débutant! Tout le monde fait l'erreur la première fois. Vous ouvrez la bouche et avalez du sable. Vous perdez 3 points de vie.
+    *set Hippathie -3
+    *goto mouvement1
+  # Respirer dos au vent.
+    Bien vu. Toujours respirer dos au vent, à travers le tissu. Le reste du temps, on reste en apnée. 
+    *goto mouvement1
+
+*label mouvement1
+Vous avancez mais la force du vent commence déjà à vous ralentir considérablement. Les hordiers se rapprochent instinctivement pour faire bloc. Vous percevez une déccélération. Le ressac. Une nouvelle vague arrive. 
+*choice
+  # Couché !
+    Vos compagnons plongent au sol et laissent passer la vague, laquelle chariait des débris de bois. Les restes d'un cadavre de char.
+    *goto buisson
+  # Chainé !
+    Vos compagnons se lient par les bras et s'attachent comme ils peuvent. Vous encaissez la vague sans faiblir. Un débris de bois passe à quelques cheveux de Castor mais celui-ci ne s'en rend pas compte.
+    *goto buisson
+  # Ne rien dire.
+    La vague vous renverse. Vous entendez un cri. ${traceur} a été percuté par un débris de bois. Il a perdu 2 points de vie. Vous rampez pour reformer le groupe et vous vous relevez. 
+    *if (traceur = "Castor") 
+      *set Castor -2
+    *if (traceur = "Pollux") 
+      *set Pollux -2
+    *if (traceur = "Hathor") 
+      *set Hathor -2
+    *goto buisson
+
+*label buisson
+
+En approchant du village, vous apercevez deux abris potentiels. A votre gauche, s'agite un large buisson. A votre droite s'étire une grande muraille en ruines. 
+*choice
+  # On avance tout droit !
+    Vous préférez contrer sans utiliser les avantages du terrain. Votre tactique se révèle payante bien que fatigante. Tous les personnages perdent 1 point de vie mais vous atteignez les portes de la ville.
+    *set Hippathie -1
+    *set Hathor -1
+    *set Castor -1
+    *set Pollux -1
+    *goto portes
+
+  # Le buisson !
+    En temps normal, le buisson ne pourrait pas couvrir les vingt-cinq membres de la Horde mais il suffira pour quatre malheureux survivants.
+    *choice
+      # Couché !
+        Vous conseillez à vos compagnons de s'allonger au sol pour offrir le moins de surface possible. Dans la gadoue ce genre de tactique peut tourner à la noyade mais le sol vous est favorable. Vous laissez passer la tempête en profitant de l'abri végétal.
+        *goto portes
+
+      # Chainé !
+        Les hordiers s'accrochent les uns aux autres. Le buisson coupe le vent facial et aucun projectile ne vient vous heurter. ${traceur} apprécie de sentir le groupe massé autour de lui et reprend confiance. ${traceur} gagne 1 point de vie.
+        *if (traceur = "Castor") 
+          *set Castor +1
+        *if (traceur = "Pollux") 
+          *set Pollux +1
+        *if (traceur = "Hathor") 
+          *set Hathor +1
+        *goto portes
+
+  # Derrière la muraille !
+    Vous indiquez la protection de pierre et vous vous y plaquez rapidement. Elle va couper les vents latéraux. Vous profitez de l'abri pour reprendre votre souffle. Vous posez votre main sur la muraille et percevez son état de fragilité. La glu de méduse qui a servi à assembler les blocs ne doit pas être de première jeunesse. Vous pensez à vous déplacer mais il est déjà trop tard. L'onde de choc ébranle le mur qui s'écroule sur vous. La onzième horde finit sa route sous les éboulis. Vous êtes morte.
+    *goto_scene death
+
+*label portes
+Vous êtes parvenu devant les portes de la ville. Vous pourriez semer le maître-foudre dans ses rues ou mourir écrasé par des débris. Au nord-est s’étend le désert, un terrain dépourvu d’obstacles que vous maîtrisez bien. Au sud-est, un lac vous permettrait de bloquer le crevent.
+
+Où voulez-vous aller?
+
+*choice
+
+  #La ville.
+
+    Vous franchissez les portes de la ville.
+
+    *page_break La ville
+
+    *goto_scene ville
+
+  #Le désert.
+
+    Vous laissez la ville et filez vers le nord.
+
+    *page_break Le désert
+
+    *goto_scene desert
+
+  #Le lac.
+
+    Un chien ne parviendra jamais à vous retrouver par là. Vous partez au sud.
+
+    *page_break Le lac
+
+    *goto_scene lac
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

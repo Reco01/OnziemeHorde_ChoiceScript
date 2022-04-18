@@ -1,0 +1,199 @@
+﻿La direction de la ville est trop évidente. 
+*line_break
+*line_break
+L'assassin à vos trousses va probablement penser que vous cherchez un abri. Vous obliquez vers le grand désert de sel. Vous pressez le pas mais déjà le vent semble redoubler de violence. Castor s'inquiète et vous demande de rebrousser chemin.
+
+*choice
+  # « D’accord, on revient en arrière. »
+    "D'accord, c'était une mauvaise idée" reconnaissez-vous. Vous revenez sur vos pas, en visant la silhouette de la ville qui commence à disparaître dans les vagues de sable. Vous avancez vite avec le vent dans le dos mais au bout de cinq cents mètres à peine, vous retombez sur le maître foudre qui vous poursuivait. Une minute plus tard, votre troupe est décimée. Vous avez fait ce qu'aucune horde n'a fait avant vous, RECULER, et vous en avez payé le prix.
+    *goto_scene death
+  # « On fait une pause ».
+    Vous vous arrêtez un moment pour souffler. Les rafales chargées d'embrun vous fouettent le visage. Petit à petit le sel va détruire vos défenses en métal. Vous ne pouvez pas attendre là éternellement. Vous reprenez la route.
+    *goto desert1
+  # « Pas le temps de dormir, on avance ! ».
+    Avec un assassin aux trousses, il est hors de question de s'arrêter. Vous continuez à avancer malgré la férocité des rafales. ${traceur} encaisse des dégâts.
+    *if (traceur = "Castor") 
+      *set Castor -1
+    *if (traceur = "Pollux") 
+      *set Pollux -1
+    *if (traceur = "Hathor") 
+      *set Hathor -1
+    *goto desert1
+
+*label desert1
+Des nuages gris s'amoncellent et roulent les uns sur les autres, vous plongeant dans la pénombre. 
+*line_break
+*line_break
+L'avancée devient de plus en plus pénible. Vous entendez vos compagnons geindre. Votre horde a connu pire depuis le début de votre quête mais vous sentez bien que la fatigue et le stress conjugués érodent les hommes plus efficacement que le vent. 
+*page_break
+Derrière vous des hurlements mi-humains mi-animaux retentissent et vous comprenez que le maître-foudre a suivi votre trace. 
+*line_break
+Vous tentez encore d'accélérer le rythme mais c'est peine perdue. C'est un mur d'air compact qui se dresse devant vous. 
+*line_break
+Tous vos efforts sont concentrés sur vos pieds qui doivent marteler le sol comme des piolets. Vous progressez de trois cents mètres avant que l'assassin ne vous rejoigne.
+*page_break Le maître foudre
+Vous ignorez comment le maître foudre a fait mais il est passé devant vous et vous attend, un sourire goguenard aux lèvres.
+*line_break
+*line_break
+A côté de lui se dresse une créature: un crevent, le genre de chien de chasse qui peut couper une rafale pour ramener un lapin. Sur un signe de son maître, la bête se rue vers vous.
+*if traceur = "Hippathie"
+  *goto_scene death
+*page_break
+${traceur} s'interpose et il reçoit en récompense un poignard en pleine poitrine. A travers les rafales de sable, vous n'avez rien vu. Vous apercevez seulement les deux pouces de métal qui dépassent de la poitrine de votre camarade, et la tache rouge qui s'élargit autour. ${traceur} essaie d'articuler une dernière phrase, il ouvre la bouche et avale du sable. Il s'écroule.
+*page_break
+${traceur} est mort.
+*if (traceur = "Castor") 
+  *set Castor 0
+*if (traceur = "Pollux") 
+  *set Pollux 0
+*if (traceur = "Hathor") 
+  *set Hathor 0
+*page_break
+Vos camarades vous regardent. Vous n'êtes plus que trois et le maître foudre s'apprête à souffler vos vies comme des bougies, si son molosse ne le fait pas avant. 
+*line_break
+*line_break
+Allez vous fuir ou faire ce que la horde fait de mieux, avancer contre l'adversité?
+
+*choice
+  # Prendre la fuite.
+    Retraite générale! Vous tournez les talons et déguerpissez. La bête rattrape un de vos camarades et le plaque au sol. Vous n'entendez pas ses cris de douleur, perdus au milieu des hurlements du vent. Un deuxième corps s'écroule, touché par une flèche. Et trois expirations plus tard c'est votre buste qui est déchiré par une atroce douleur. Vous ne sentez plus vos jambes et vous tombez. Quelque chose a dû sectionner votre colonne vertébrale. Votre visage percute le sable. Avant de vous évanouir une pensée angoissante vous étreint. Vous avez reculé. Vous avez trahi l'héritage des hordes précédentes.
+    *goto_scene death
+  # Faire face jusqu’au bout.
+    Vous avez été élevée depuis l'âge de cinq ans pour devenir un membre de la horde. 
+    *line_break
+    *line_break
+    Vous avez affronté votre premier ventilateur à l'âge de sept ans. Chaque épreuve de la vie est venue buter sur votre visage et vous avez avancé. Avec vos compagnons, vous avez parcouru la moitié du monde connu, en défiant les pillards, les glissiers, les ilotsméduses et toutes les menaces du monde. Le meilleur assassin du monde se tient peut-être devant vous, au coeur d'une tempête, mais vous savez une chose:
+    *line_break
+    *line_break
+    Vous savez contrer !
+    *line_break
+    Vous pliez les genoux et vous allez chercher en vous ce souffle de la volonté qui vous fait avancer, droit vers le molosse.
+*page_break Contrer le crevent
+Le crevent s'arrête presque aussitôt. 
+*line_break
+*line_break
+Il semble effrayé ou décontenancé par votre attitude. Il gémit puis repart en courant vers son maître, qui ne sourit plus. Il regarde votre groupe. C'est du moins ce que vous croyez avant de réaliser qu'il regarde derrière vous. Des balles de lumières. Du bleu, du rouge, du vert. 
+*line_break
+*line_break
+Des chrones! Des dizaines de chrones arrivent, dans la direction opposée au vent. 
+*line_break
+*line_break
+Impossible? Qui peut le dire. Vous plongez à terre pour éviter ces créatures magiques aux pouvoirs inconnus.
+*page_break Les Chrones
+Le maître foudre semble très rapide mais pas assez pour échapper aux chrones. Il remarque vite qu'il est encerclé. Son chien tente de s'enfuir. Un chrone rouge passe sur lui et la bête disparaît. 
+*line_break
+*line_break
+A-t-il été dévoré ou téléporté? Impossible de répondre. Votre peuple en connait si peu sur ces créatures magiques. Vous savez seulement que chacun a une compétence particulière. Le maître foudre tente de briser le cercle et saute à travers un chrone transparent en espérant qu'il soit inoffensif. Votre agresseur réappaît de l'autre côté de la bulle changé en statue de pierre, qui s'écroule au sol. 
+*line_break
+*line_break
+Note pour plus tard: éviter ce chrone.
+*page_break
+Vous restez plaqués à terre en espérant que le vent va disperser les chrones meurtriers mais ceux-ci semblent former une ronde autour de vous.
+*line_break
+*line_break
+Peut-être sont-ils attirés par l'énergie vitale? Vous êtes les seuls êtres de ce désert. La formation semble se rapprocher de vous. Vous prévoyez des problèmes. Vous devriez employer la même tactique que le maître foudre: foncer sur un chrone inoffensif et la traverser. Ce plan n'a pas réussi à votre poursuivant mais cela pourrait marcher. 
+*line_break
+*line_break
+Il est évident que vous éviterez le transparent mis que choisir parmi les autres? Le rouge qui a aspiré le crevent ? Le chrone bleu aux reflets irisés? Le chrone noir qui semble aspirer la lumière? Ou le chrone blanc qui illumine la scène de sa douce lumière? Ou préférez-vous attendre?
+
+*choice
+  # Le chrone rouge
+    Vous êtes cernés de toutes parts. Autant affronter la mort en face. Vous courez vers le chrone rouge qui a vaporisé le crevent du maître-foudre et plongez dedans. Pendant une éternité, vous avez l'impression de descendre un toboggan interminable, au coeur d'un volcan. Des trainées rouges et orange vous accompagnent sur des kilomètres.
+    *page_break Au cœur du chrone rouge
+    Quand vous ouvrez les yeux vous apercevez des tours à l'horizon. Elles semblent familières. Vous ne les avez pas vues depuis votre enfance, depuis que le bateau vous a déposé pour votre entraînement. Vos compagnons se relèvent et expriment aussi leur surprise. Vous n'en revenez pas mais vous êtes revenus à votre point de départ: la capitale, Extrême-Aval. 
+    *line_break
+    *line_break
+    Votre Horde a échoué mais vous avez survécu pour ramener le carnet du scribe et vos connaissances. La relève sera bientôt prête et, grâce vous, elle ira jusqu'au bout. Votre quête s'achève sur une victoire.
+    *goto_scene ending
+  # Le chrone bleu
+    Vous plongez dans le chrone bleu. À l'intérieur les couleurs semblent incohérentes. Des paysages étranges défilent devant vos yeux: des prairies violettes, un ciel rouge et des montagnes roses. Vous ressortez du chrone et aspirez une bouffée d'air. La tempête a cessé, laissant place à une douce zéphirine. Vous éclatez de rire. Vous avez survécu. 
+    *line_break
+    *line_break
+    Vous pensez que tout va bien jusqu'au moment où vous apercevez vos camarades. Leur peau a pris une teinte noire-violacée et leurs cheveux ont blanchi. En regardant vos mains, vous constatez que le même phénomène vous affecte.
+    *set couleur "Inversée"
+    *page_break
+    Après quelques minutes d'angoisse vous constatez que la transformation n'a pas affecté votre santé. Vous tenez encore la forme. Le chrone bleu a simplement perturbé vos couleurs. Vous pouvez continuer votre quête.
+    *goto puits
+  # Le chrone noir
+    Vous plongez dans le chrone noir et disparaissez à jamais. Tous les objets que vous transportiez s'effacent. La prochaine horde ne pourra pas bénéficier de vos découvertes. Dommage. Vous êtes morte.
+    *goto_scene death
+  # Le chrone blanc
+    Vous traversez le chrone blanc. Une douce lumière vous éclaire et vous réchauffe pendant le voyage qui semble durer un moment. Vous sentez dans vos entrailles votre âme, votre vif, qui reprend des forces. Vous ressortez dans un désert calmé, avec de l'énergie à revendre.
+    *set Hippathie +2
+    *set Hathor +2
+    *set Castor +2
+    *set Pollux +2
+    *goto puits
+  # On va attendre encore un peu.
+    Vous restez plaqués au sol. Le vent finira bien par disperser ces chrones, pensez-vous. Ce serait le cas si ces créatures magiques obéissaient aux lois classiques de la physique mais vous avez constaté que leur trajectoire n'avait rien de normal. 
+    *line_break
+    *line_break
+    Les bulles translucides continuent de tourbillonner autour de vous et se rapprochent de plus en plus. Voulez-vous attendre d'être déchiquetés ou voulez-vous plonger dans l'un des chrones?
+    *choice
+      # On va attendre qu’ils se dispersent.
+        Les chrones insistent et se rapprochent. Vous essayez de vous serrer les uns contre les autres mais les bulles de couleur finissent par vous toucher. Un de vos bras se volatilise. Vous voulez crier mais le chrone noir absorbe les sons. Votre mort aura lieu dans un silence absolu. La pointe de votre pied s'évapore dans un autre monde. Vous n'avez pas le temps de vous plaindre car le reste de votre corps a été changé en pierre. Vous êtes morte.
+        *goto_scene death
+      # Le chrone rouge
+        Vous êtes cernés de toutes parts. Autant affronter la mort en face. Vous courez vers le chrone rouge qui a vaporisé le crevent du maître-foudre et plongez dedans. Pendant une éternité, vous avez l'impression de descendre un toboggan interminable, au coeur d'un volcan. Des trainées rouges et oranges vous accompagnent sur des kilomètres.
+        *page_break Au cœur du chrone rouge
+        Quand vous ouvrez les yeux vous apercevez des tours à l'horizon. Elles semblent familières. Vous ne les avez pas vues depuis votre enfance, depuis que le bateau vous a déposé pour votre entraînement. Vos compagnons se relèvent et expriment aussi leur surprise. Vous n'en revenez pas mais vous êtes revenus à votre point de départ: la capital, Extrême-Aval. Votre Horde a échoué mais vous avez survécu pour ramener le carnet du scribe et vos connaissances. La relève sera bientôt prête et, grâce vous, elle ira jusqu'au bout. Votre quête s'achève sur une victoire.
+        *goto_scene ending
+      # Le chrone bleu
+        Vous plongez dans le chrone bleu. À l'intérieur les couleurs semblent incohérentes. Des paysages étranges défilent devant vos yeux: des prairies violettes, un ciel rouge et des montagnes roses. Vous ressortez du chrone et aspirez une bouffée d'air. La tempête a cessé, laissant place à une douce zéphirine. Vous éclatez de rire. Vous avez survécu. Vous pensez que tout va bien jusqu'au moment où vous apercevez vos camarades. Leur peau a pris une teinte noire-violacée et leurs cheveux ont blanchi. En regardant vos mains, vous constatez que le même phénomène vous affecte.
+        *set couleur "Inversée"
+        *page_break
+        Après quelques minutes d'angoisse vous constatez que la transformation n'a pas affecté votre santé. Vous tenez encore la forme. Le chrone bleu a simplement perturbé vos couleurs. Vous pouvez continuer votre quête.
+        *goto puits
+      # Le chrone noir
+        Vous plongez dans le chrone noir et disparaissez à jamais. Tous les objets que vous transportiez s'effacent. La prochaine horde ne pourra pas bénéficier de vos découvertes. Dommage. Vous êtes morte.
+        *goto_scene death
+      # Le chrone blanc
+        Vous traversez le chrone blanc. Une douce lumière vous éclaire et vous réchauffe pendant le voyage qui semble durer un moment. Vous sentez dans vos entrailles votre âme, votre vif, qui reprend des forces. Vous ressortez dans un désert calmé, avec de l'énergie à revendre.
+        *set Hippathie +2
+        *set Hathor +2
+        *set Castor +2
+        *set Pollux +2
+        *goto puits
+
+*label puits
+L'épisode des chrones ne vous empêchera pas d'aller jusqu'au bout de votre aventure. Le maître foudre étant mort, vous savez qu'il vous reste une petite chance de réussir. Vous marchez plusieurs kilomètres en contrant la douce zéphirine et parvenez à un ancien puits. Il semble déserté depuis un moment. 
+*line_break
+*line_break
+Voulez-vous tenter de descendre pour chercher des provisions ou préférez-vous passer votre chemin?
+*choice
+  # « On va examiner ce puits ».
+    Vous vous encordez solidement puis descendez dans le puits. La couche de sable confirme votre intuition: personne n'a utilisé ce site de secours depuis un moment. Mais en fouillant attentivement vous finissez par découvrir des provisions sèches. 
+    *line_break
+    *line_break
+    C'est l'occasion pour votre horde de reprendre des forces après toutes ses épreuves.
+    *choice
+      # « Festoyons. ».
+        Vous prenez une heure de pause pour vous restaurer. Tous les personnages regagnent 2 points de vie. Vous reprenez votre chemin, revigorés.
+        *set Hippathie +2
+        *set Hathor +2
+        *set Castor +2
+        *set Pollux +2
+        *goto desert2
+      # « On repart ! ».
+        Vous quittez le puits et poursuivez votre traversée du désert.
+        *goto desert2
+
+  # « Pas le moment pour une pause ».
+    Vous quittez le puits et poursuivez votre traversée du désert.
+    *goto desert2
+
+
+*label desert2
+Une heure plus tard, vous ne voyez toujours rien à l'horizon.
+*page_break Trois heures plus tard…
+Vous continuez à avancer. Vous n'apercevez toujours rien.
+*page_break Six heures plus tard…
+La horde avance. Le vent reprend des forces. Vous devinez à la mine de vos compagnons que leur volonté fléchit.
+*line_break
+*line_break
+Le maître-foudre et son molosse ont disparu mais le ciel ne veut pas se calmer. Les chrones ne constituaient qu’une parenthèse.
+*line_break
+*line_break
+Vos compagnons disent avoir aperçu des bateaux volants filant vers l’est. Vous scrutez l’horizon à travers les nuages de sable. Il vous semble deviner un oasis. Mais vous êtes encore loin. Une dernière épreuve vous attend encore.
+*goto_scene lasttempete
+

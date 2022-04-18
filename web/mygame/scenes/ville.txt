@@ -1,0 +1,290 @@
+﻿*label ville
+Vous annoncez d'un ton déterminé: "Au village! On le sèmera dans les ruelles." 
+*line_break
+*line_break
+Vos compagnons vous regardent et acquiescent d'un hochement de tête. Vous entrez dans la bourgade. Ici les ruelles déforment l'écoulement du vent. Les murs brisent les vagues mais le souffle devient parfois plus violent dans les goulots étroits. 
+*line_break
+*line_break
+Il va falloir adopter la meilleure formation.
+
+*choice
+  # Formation en ligne face au vent <x¤> ?
+    Très mauvais choix. Vous encaissez tous le vent de plein fouet. Tous les personnages perdent des points de vie.
+    *set Hippathie -2
+    *set Hathor -2
+    *set Castor -2
+    *set Pollux -2
+    *goto ville1
+  # « Formation en pyramide ! ».
+    À quatre, la formation triangulaire sera aisée mais il reste à déterminer qui va encaisser le vent facial. Qui sera le nouveau traceur ?
+    *choice
+      # « Castor devant ! ».
+        < ne perd qu’un point de vie grâce à son physique hors norme.
+        *set Castor -1
+        *set traceur "Castor"
+        *goto ville1
+      # « Pollux devant ! ».
+        > ne perd qu’un point de vie et ne s’en plaint pas.
+        *set Pollux -1
+        *set traceur "Pollux"
+        *goto ville1
+      # « Hathor devant ! ».
+        ¤ perd 4 points de vie mais cela ne l’arrête pas.
+        *set Hathor -4
+        *set traceur "Hathor"
+        *goto ville1
+      # « Je passe devant ! ».
+        « Tu plaisantes, coupe Castor. Pas question que tu encaisses un débris par accident. Si tu meurs, on meurt tous. JE prends la tête. »
+        *set traceur "Castor"
+        *goto ville1
+
+  # « Formation en colonne ! ».
+    C’est la meilleure disposition pour progresser dans les villes, malheureusement le traceur va encaisser un maximum de dommages. Qui prendra la tête ?
+    *choice
+      # « Castor devant ! ».
+        < ne perd qu’un point de vie grâce à son physique hors norme.
+        *set Castor -1
+        *set traceur "Castor"
+        *goto ville1
+      # « Pollux devant ! ».
+        > ne perd qu’un point de vie et ne s’en plaint pas.
+        *set Pollux -1
+        *set traceur "Pollux"
+        *goto ville1
+      # « Hathor devant ! ».
+        ¤ perd 4 points de vie mais cela ne l’arrête pas.
+        *set Hathor -4
+        *set traceur "Hathor"
+        *goto ville1
+      # « Je passe devant ! ».
+        « Tu plaisantes, coupe Castor. Pas question que tu encaisses un débris par accident. Si tu meurs, on meurt tous. JE prends la tête. »
+        *set traceur "Castor"
+        *goto ville1
+
+
+*label ville1
+Les vents vous frappent mais votre formation vous permet de progresser malgré les obstacles. Alors que tous les habitants sont cachés dans leur  cachette, maison ou cave, vous progressez face au vent. 
+*line_break
+*line_break
+Castor lâche un commentaire méprisant sur les puisards qui se perd aussitôt dans les hurlements d'Eole.  Le choon gagne en intensité. Il atteint presque la force d'un blizzard. Si votre scribe était encore en vie, il serait en train de se demander comment retranscrire les rythmes du vent. Votre rôle se résume à l'analyse. Vous percevez aux variations qu'une violente bourrasque va bientôt frapper. 
+*line_break
+*line_break
+Vous pressez le pas, à la recherche d'un abri ou d'une prise. Les murets de la ruelle vous protègent efficacement des rafales latérales. Vous progressez jusqu'à un muret en pierres sèches susceptible de vous offrir protection.
+*page_break Le muret
+${traceur} se retourne et vous demande ce qu'il faut faire: "On continue ou on s'accroupit?"
+
+*choice
+  # On se baisse.
+    "Accroupis!"
+    *page_break
+    Inutile de détailler. Les membres de la horde fonctionnent en synergie, comme les doigts de la main. À peine avez-vous donné une indication que vos camarades se baissent et se collent au muret. Brillante manœuvre. La violente bourrasque passe au-dessus de vos têtes sans vous arracher ne serait-ce qu'un cheveu.
+    *page_break
+    Vous vous relevez juste après et traversez la place. Vous pouvez vous diriger à droite vers la tour ou à gauche vers l'aéroport.
+    *choice
+      # À droite, on vise la tour de l’aéromaître.
+        *goto villedroite
+      # À gauche, on va profiter de l’aéroport.
+        *goto villegauche
+      # Je ne sais pas. On peut me laisser une minute pour décider ?
+        Rester sur une place découverte sans protection n'était pas l'idée du siècle. Une rafale plus vicieuse que les autres vous balaie comme des quilles. Vous perdez un point de vie. Vos compagnons vous pressent de choisir une direction.
+        *set Hippathie -1
+        *choice
+          # À droite, on vise la tour de l’aéromaître.
+            *goto villedroite
+          # À gauche, on va profiter de l’aéroport.
+            *goto villegauche
+
+
+  # On continue.
+    "On reste debout, répondez-vous. Il faut avancer." Vos compagnons hochent la tête. Ils savent que le poursuiveur n'est pas loin. La marche reprend.
+    *line_break
+    *line_break
+    Malheureusement, quelques instants plus tard, une violente bourrasque surgit, emporte vos amis et les fracasse contre le muret de pierres sèches.
+    *page_break
+    , ^.~.   . ' , °   ' , '
+    *page_break
+    Chaque personnage a perdu 2 points de vie. Le choc vous a sonné mais il en faut plus pour abattre des hordiers. Vous vous relevez et traversez la place en profitant d'un moment de répit. Vous pouvez vous diriger à droite ou à gauche.
+    *set Hippathie -2
+    *set Hathor -2
+    *set Castor -2
+    *set Pollux -2
+    *choice
+      # À droite, on vise la tour de l’aéromaître.
+        *goto villedroite
+      # À gauche, on va profiter de l’aéroport.
+        *goto villegauche
+      # Je ne sais pas. On peut me laisser une minute pour décider ?
+        Rester sur une place découverte sans protection n'était pas l'idée du siècle. Une rafale plus vicieuse que les autres vous balaie comme des quilles. Vous perdez un point de vie. Vos compagnons vous pressent de choisir une direction.
+        *set Hippathie -1
+        *choice
+          # À droite, on vise la tour de l’aéromaître.
+            *goto villedroite
+          # À gauche, on va profiter de l’aéroport.
+            *goto villegauche
+
+
+*label villedroite
+Vous suivez les panneaux portant le signe d'une tour. Vous pourrez peut-être lire une information utile ou graver votre savoir avant de mourir. Après tout, votre vie n'est qu'un souffle de vent. 
+*page_break
+Une inconnue interrompt le cours de vos réflexions métaphysiques. Emmaillottée des pieds à la tête, elle hurle des phrases incompréhensibles. En vous approchant, vous comprenez ce qu'elle dit.
+*page_break Inconnue
+"Le vent a abattu une maison. J'entends des cris qui viennent des décombres. Il doit y avoir des survivants" explique l'inconnue. En temps normal, vous pourriez aider mais vous êtes au cœur d'une tempête, poursuivis par un tueur fou.
+
+*choice
+  # Ignorer la folle.
+    Personne n'est assez fou pour s'arrêter au milieu d'une tempête. Cette femme va mourir et elle n'aidera personne. 
+    *line_break
+    *line_break
+    Vous continuez dans les rues mais la densité du sable vous empêche de voir les panneaux. Vous errez à l'aveugle pendant plusieurs minutes avant de finalement atteindre l'aéroport.
+    *goto aeroport
+  # Aider la femme.
+    Vous prenez quelques minutes et vos pelles pour désensabler la ruine, malgré les vagues de vent. Il vous suffit de deux minutes pour extirper des décombres deux enfants: un garçon de huit ans, crasseux mais vivant, et une petite fille blonde, aux cheveux tressés à la mode des airpailleurs.
+    *page_break
+    L'inconnue récupère les deux enfants, qui s'avèrent être les siens et se confond en remerciements. Vous êtes des héros. La mère n'a rien à vous offrir si ce n'est le chemin vers la sortie. C'est tout droit puis à droite, tout droit puis encore à droite après la tour de l'aéromaître.
+    *choice
+      # Et si je n’ai pas envie de l’écouter ?
+        Ignorant ostensiblement les conseils de la femme, vous continuez dans les rues en vous fiant à votre instinct. La densité du sable vous empêche de voir les panneaux. Vous errez à l'aveugle pendant plusieurs minutes avant de finalement atteindre l'aéroport.
+        *goto aeroport
+
+      # Suivre les instructions.
+        Malgré le souffle régulier du vent, vous parvenez rapidement à la tour. Un bel ouvrage en blocs de pierre qui brandit ses trente mètres de fierté comme un majeur tendu vers le ciel. Vous n'imaginez pas le nombre de méduses qu'il a fallu pour coller et souder l'ensemble. 
+        *goto tour
+
+*label tour
+${traceur} approche du monument et vous dit: "Je lis des inscriptions sur la tour." Vous répondez que c'est normal car il s'agit de votre code. Autrefois les scribes officiaient comme glyphiers et retranscrivaient les rythmes du vent uniquement à l'oral.
+*choice
+  # Lire
+    Vous passez une bonne heure à étudier les inscriptions de la tour, pendant que vos compagnons font un rempart de leur corps. Cela ne vous empêche pas de perdre un point de vie. Néanmoins, vous avez pu noter sur le carnet du scribe des données essentielles.
+    *set Hippathie -1
+    *page_break
+    Alors que vous atteignez la lisière du village, le vent tombe. Le poursuiveur ne vous a pas rattrapé. Sans doute a-t-il été démembré ou enterré par une tempête de sable. Vous ne savez pas et, à vrai dire, vous vous en moquez. 
+    *line_break
+    *line_break
+    L'important est que votre équipe a survécu plusieurs fois à l'enfer et qu'elle est toujours là. Vous rapportez des informations essentielles pour la relève. Bientôt vos enfants prendront le relais. Les hordiers meurent mais pas l'esprit du combat. Vous terminez sur une victoire.
+    *goto_scene ending
+  # Graver ?
+    Vous sortez votre burin et attaquez un nouveau paragraphe en glyphes. Vos compagnons tentent de vous protéger du vent mais cela n'est guère efficace. Vous peinez, consciente que le Poursuiveur vous retrouvera vite. Les rafales de vent vous font perdre deux points de vie.
+    *set Hippathie -2
+    *page_break
+    "Je vais graver notre récit pour la prochaine horde!" Vous répétez cette phrase dans votre tête et vos mains ne cessent d'aller et venir sur la pierre. 
+    *line_break
+    Vous n'entendez pas votre premier compagnon tomber. Le vent noie les sifflements des flèches. Vous notez à peine les éclaboussures de sang. Quand vous sentez la douleur, vous ne pouvez retenir un sourire moqueur. Le Poursuiveur vous a retrouvé mais trop tard. Vous avez achevé votre récit. Les hordiers meurent mais pas l'esprit de combat. La prochaine Horde atteindra l'extrême-Aval.
+    *goto_scene death
+
+  # Bof !
+    Vous avez peut-être mieux à faire ? Sortir de la ville ? Survivre ?
+    *goto sortieville
+
+
+
+
+
+
+
+
+
+*label villegauche
+Vous avancez rapidement en suivant les panneaux. ${traceur} aperçoit une construction et vous la montre du doigt :"Un puits! On pourrait s'y abriter le temps de la tempête. Le traqueur ne pourra pas rentrer." 
+*line_break
+*line_break
+Vous hésitez. Ce n'est pas dans les habitudes de la Horde. Un puits constitue autant une protection qu'une prison.
+
+*choice
+  # S’abriter.
+    "D'accord. On s'abrite." 
+    *line_break
+    *line_break
+    Vous soulevez la trappe et descendez dans le conduit obscur, en suivant de gros échelons métalliques froids. Vous refermez le couvercle et attendez à l'abri que les heures passent. Le vent continue de hurler sa fureur pendant un long moment. Personne ne vient titiller l'entrée. Le Poursuiveur a probablement perdu votre trace.
+    *page_break Au fond du puits
+    Après un long moment d'attente, vous décidez de ressortir à l'air libre mais la trappe ne bouge pas. Des centaines de kilos de sable charriés par la tempête se sont abattus sur vos têtes. Vous devriez savoir qu'on met seulement les enfants et les personnes vulnérables dans les puits. Il faut nécessairement des adultes pour désensabler par la suite. Les villageois, ignorant votre existence, ne viendront faire le ménage que dans quelques jours. Ils ne trouveront que des cadavres désséchés. Votre quête se termine au fond d'un trou, sans honneur.
+    *goto_scene death
+
+  # Ignorer le puits.
+    "Non! Les puits sont pour les enfants. On continue." 
+    *line_break
+    *line_break
+    Vous avancez malgré les morsures du vent. Vous perdez un point de vie. Vous regrettez de ne pas avoir choisi l'abri mais la voie la plus facile n'est pas toujours la meilleure. Vous avez probablement raté l'aéroport car vous ne rencontrez rien de semblable. Votre groupe parvient aux limites de la ville. ${traceur} se tourne vers vous:" Nous avons traversé toute la ville. Qu'est-ce qu'on fait maintenant? On tente le désert ou on essaie de retourner au centre-ville?"
+    *set Hippathie -1
+    *choice
+      # Deux minutes ! Je réfléchis.
+        Pendant que vous perdez du temps à réfléchir, le vent frappe vos coéquipiers. Les autres personnages perdent chacun un point de vie.
+        *set Hathor -1
+        *set Castor -1
+        *set Pollux -1
+        *choice
+          # Le désert.
+            Vous quittez la ville, d'un pas convaincu et vous enfoncez dans le désert. Vous marchez trois heures avant d'être rattrapés et éliminés par la maître foudre. Votre quête s'achève ici, au milieu des dunes de sable.
+            *goto_scene death
+          # On revient au centre-ville. Il nous faut cet aéroport.
+            Vous avancez à nouveau dans les rues de la ville mais la densité est telle que vous voyez à peine à deux pas. Vos mains sont collées à vos compagnons et eux-mêmes ne perçoivent leur environnement que par leurs extrémités. À moitié aveuglés, vous progressez et parvenez à l'aéroport. 
+            *goto aeroport
+
+
+      # Le désert.
+        Vous quittez la ville, d'un pas convaincu et vous enfoncez dans le désert. Vous marchez trois heures avant d'être rattrapés et éliminés par la maître foudre. Votre quête s'achève ici, au milieu des dunes de sable.
+        *goto_scene death
+      # On revient au centre-ville. Il nous faut cet aéroport.
+        Vous avancez à nouveau dans les rues de la ville mais la densité est telle que vous voyez à peine à deux pas. Vos mains sont collées à vos compagnons et eux-mêmes ne perçoivent leur environnement que par leurs extrémités. À moitié aveuglés, vous progressez et parvenez à l'aéroport. 
+        *goto aeroport
+
+
+
+
+*label aeroport
+${traceur} aperçoit en premier les amarres des bateaux volants: "Les attaches sont libres!" On fait quoi?"
+*choice
+  # On avance !
+    "On est pressé, tranchez-vous. On avance!" 
+    *line_break
+    *line_break
+    Les hordiers hochent la tête et vous suivent mais le rythme du vent s'accélère. Ce n'est plus un choon que vous affrontez. Chaque centimètre carré de votre épiderme perçoit la menace. Vous reconnaissez cette fureur...
+    *page_break
+    Å
+    *page_break
+    Un furvent! La pire forme du vent. Vous savez que vous êtes foutus à l'instant où vous le reconnaissez. La tempête vous arrache du sol et vous éclate contre les murs. Vous êtes morts fièrement face au vent ultime. Votre quête s'achève ici.
+    *goto_scene death
+
+  # On s’attache !
+    C'est le moment d'utiliser vos connaissances pour rester en vie. Vous sentez que le vent va se déchainer mais la précédente horde a mis au point une technique particulièrement intéressante. Vous vous attachez aux amarres, en laissant dix mètres d'intervalle entre chaque membre. De cette façon, vous ne serez ni démantibulés ni percutés. Vous savez que vous pouvez le faire. C'est alors que vous sentez le changement. Le choon gagne en intensité et devient...
+    *page_break
+    å
+    *page_break
+    Un furvent!  La dernière et pire forme de vent. Aucune horde, aucun humain, n'a jamais résisté à la dernière forme. Mais vous êtes prêts. Toute la science des hordes précédentes est avec vous, dressée devant vous comme un traceur. Vous sentez à vos côtés vos quinze ans d'entraînement et votre vie de pratique qui vous épaulent et raffermissent votre pack. Vous savez que vous allez vaincre.
+    *page_break Technique du chat volant
+    !!! - ' ; ',',   !!! ', ,''  ,  ,,^,, ~, '°
+    *page_break - ' ; ',',   !
+    Quand le vent cesse, vous atterrissez sur vos deux pieds. Tous vos compagnons sont encore en vie. C'est formidable! 
+    *line_break
+    *line_break
+    Vous avez accompli une grande première. Vous avez vaincu l'ultime forme du vent. Tous les espoirs sont permis pour la prochaine génération. Vous avez perdu un point de vie au cours de la manoeuvre mais ce n'est pas cher payé. Vous reprenez la traversée de la ville tandis que souffle une douce zéphirine.
+    *set Hippathie -1
+    *set furvent true
+    *goto sortieville
+
+*label sortieville
+*page_break Sortie est de la ville
+Vous sortez de la bourgade et empruntez un sentier dessiné. Le poursuiveur a dû perdre votre trace, ou la vie dans le furvent car il ne vous suit plus. 
+*page_break Après quelques heures de marche…
+Vous arrivez en vue d'un oasis. Des nomades doivent y stationner. Ils pourraient vous ramener en extrême-Aval. A ce moment ${traceur} agrippe votre bras et vous désigne une silhouette à l'horizon: un bateau volant. Que faire? Attirer l'attention l'attention des glissiers ou opter pour l'oasis?
+*choice
+  # Prendre une bouffée d’air.
+    Vous fermez les yeux et respirez profondément. Le stress nuit à votre capacité de jugement. Vous expirez tout doucement, le temps de retrouver votre calme. Vous sentez que vous récupérez des forces. 
+    *line_break
+    *line_break
+    Il est temps de choisir votre prochaine destination.
+    *set Hippathie +1
+    *choice
+      # Gesticuler pour se faire remarquer.
+        Vous criez. Vos compagnons s’agitent mais le vaisseau volant ne semble pas vous remarquer. Vous êtes trop loin. Il faudrait franchir encore quelques kilomètres pour espérer atteindre votre radeau de sauvetage.
+        *goto_scene lasttempete
+      # Partir vers l’oasis.
+        Vous avancez droit vers l’oasis. Il semble proche mais vous réalisez quelques minutes plus tard que vous êtes victime d’une illusion d’optique. Il vous reste encore quelques heures d’efforts.
+        *goto_scene lasttempete
+  # Gesticuler pour se faire remarquer.
+    Vous criez. Vos compagnons s’agitent mais le vaisseau volant ne semble pas vous remarquer. Vous êtes trop loin. Il faudrait franchir encore quelques kilomètres pour espérer atteindre votre radeau de sauvetage.
+    *goto_scene lasttempete
+  # Partir vers l’oasis.
+    Vous avancez droit vers l’oasis. Il semble proche mais vous réalisez quelques minutes plus tard que vous êtes victime d’une illusion d’optique. Il vous reste encore quelques heures d’efforts.
+    *goto_scene lasttempete
+
+

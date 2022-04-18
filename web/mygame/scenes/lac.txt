@@ -1,0 +1,35 @@
+﻿Votre horde progresse peu à peu contre le vent en direction de la mare.
+*line_break
+Castor grommelle encore mais avance.
+
+*choice
+  # Encourager.
+    Vous encouragez vos compagnons : "Allez! Encore un effort! On va couper par l'eau! Son chien ne pourra pas renifler notre trace." Les hordiers reprennent courage et doublent la foulée.
+    *goto rive
+  # Crier.
+    Pas le temps de prendre des pincettes:"Avance! Castor! Tu chouineras plus tard!" Le pilier s'exécute.
+    *goto rive
+
+*label rive
+Vous parvenez aux abords d'un lac qui s'étend sur des centaines de mètres. 
+*line_break
+Hathor pousse un cri et désigne du doigt l'horizon. 
+*page_break Les rives du lac
+Une forme vient dans votre direction, depuis le désert. 
+*line_break
+Il s'agit du maitre-foudre et de son molosse. Ils sont parvenus à retrouver votre trace malgré le vent. 
+*line_break
+"Qu'est-ce qu'on fait? vous demande Pollux. On l'affronte ou on tente de le semer à la nage?"
+
+*choice
+  # Nager.
+    Toujours en formation vous entrez dans la mare. Votre entrainement comportait une dimension natation et vous savez que personne ne peut vous battre sous le vent. Vous nagez quelques mètres en démarrant un chant pour soutenir vos compagnons qui suivent. Loin derrière vous, vous entendez des hurlements de rage. Il semblerait que le maître-foudre ne puisse pas vous suivre dans l'élément liquide. Peut-être s'agit-il de son talon d'Achille? Ce tueur n'est pas aussi exceptionnel qu'il le prétendait. Vous constatez même qu'il fait demi-tour et vous esquissez un sourire... avant de réaliser pourquoi votre assaillant s'esquive. Le rythme du vent a changé et vous reconnaissez les signes. Vous ne l'avez croisé qu'une fois et avez survécu grâce à un puits. Un furvent s'annonce. La pire forme de vent connue. Et combiné aux flots, il va former une tempête d'air, d'eau et de sable qui va tous vous engloutir et vous noyer. La mort s'abat sur votre groupe avec toute la fureur des enfers.
+   *goto_scene death
+
+  # Combattre.
+    Vous décidez de faire front. Cette décision paraît exagérément optimiste. Le maître foudre a tué quinze membres de la horde sans effort grâce à ses armes et son molosse. Un carreau d'arbalète traverse la gorge de Pollux et son jumeau n'a pas le temps d'hurler que le fauve lui saute à la gorge. Vous réalisez quelques trente secondes plus tard que vous baignez dans votre sang. 
+    *line_break
+    *line_break
+    Pourquoi vous a-t-on attaqué? Qui aurait intérêt à éliminer la horde du Contre-vent? Vous n'aurez jamais les réponses à ces questions car vous êtes déjà morts.
+    *goto_scene death
+
